@@ -5,7 +5,7 @@ export const NegativesContext = createContext();
 export const Negatives = props =>{
 
     const [negatives, addNegative] = useState([
-        "Unproductive Monday", "Git", "Merge conflict", 'Lazy Monday'
+        "Git", "Merge conflict", 'Lazy Monday', "No mentor help at Wednesday", "Some features took longer to implement", "Lack of sleep", "Coffee machine broke down", "Some concepts are still unclear", "Lost a team member"
     ])
 
     return (
