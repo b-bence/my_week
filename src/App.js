@@ -1,32 +1,25 @@
 import React from 'react'
 import Header from './components/Header'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import PositiveList from './components/PositiveList'
-import NegativeList from './components/NegativeList'
-import {Positives} from './components/PositivesContext'
-import {Negatives} from './components/NegativesContext'
+import PositivesAndNegatives from './components/PositivesAndNegatives'
 
 const App = () => {
   return (
     <Router>
-      <Positives>
-        <Negatives>
-        <div className="App">
+        <div style={mainDivStyle}className="App">
           <Header></Header>
           <Route path="/positives">
-            <div>
-            <PositiveList></PositiveList>
-            <br></br>
-            <NegativeList></NegativeList>
-            
-            </div>
+            <PositivesAndNegatives/>
          
           </Route>
         </div>
-        </Negatives>
-      </Positives>
     </Router>
   );
+}
+
+const mainDivStyle={
+  alignItems: "center",
+  justifyContent: 'center'
 }
 
 export default App;

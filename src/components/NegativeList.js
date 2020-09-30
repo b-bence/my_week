@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react'
 import {NegativesContext} from './NegativesContext'
+import BulletPointDiv from './BulletPointDiv'
 
 const NegativeList = () => {
     const [values] = useContext(NegativesContext)
@@ -28,13 +29,19 @@ const NegativeList = () => {
     }
     
     return (
-        <div>
-            <h1>{firstValue}</h1>
-            <h1>{secondValue}</h1>
-            <h1>{thirdValue}</h1>
-            <button onClick={randomize}>Randomize</button>
-        </div>
+        <BulletPointDiv>
+            <div style={{height: "20%"}}><h1>Negatives</h1></div>
+            <div style={{height: "60%"}}>
+                <h2>{firstValue}</h2>
+                <h2>{secondValue}</h2>
+                <h2>{thirdValue}</h2>
+            </div>
+            <div>
+                <button onClick={randomize}>Randomize</button>
+            </div>
+        </BulletPointDiv>
     )
 }
+
 
 export default NegativeList
