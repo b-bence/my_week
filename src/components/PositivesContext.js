@@ -5,7 +5,8 @@ export const PositivesContext = createContext();
 export const Positives = props =>{
 
     const [positives, addPositive] = useState([
-        'Relaxed week','Good teamwork','Effective communication', "1","2","3","4","5","6"
+        'Relaxed week','Good teamwork','Good communication', "Balance between teamwork and individual work", "Could follow the plan", "Big challenge", "Learned a lot of new things", "New team member"
+        
     ])
 
     // const [negatives, addNegative] = useState([

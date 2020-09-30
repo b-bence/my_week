@@ -15,6 +15,7 @@ const Header = () => {
             <h1 style={headerStyle}>Insert team name here</h1>
 
             <button><Link to='/positives' >Positives & Negatives</Link></button>
+            <button><Link to='/summary' >Week summary</Link></button>
         </HeaderDiv>
     )
 
