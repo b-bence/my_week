@@ -18,5 +18,4 @@ export const Positives = props =>{
         </PositivesContext.Provider>
     )
 
-
 }
