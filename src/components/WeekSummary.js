@@ -16,13 +16,14 @@ const WeekSummary = () =>{
     const thursday = ["Creating presentation", "Fixing bugs", "Extra features", "Last minute merge conflict", "Pair programming", "Finished most of the project"]
     let [thursdayDisplay, addToThursday] = useState([])
 
-    const friday = ['Demo']
+    let [fridayDisplay, addToFriday] = useState([])
 
     const randomize = () =>{
         addToMonday([]) 
         addToTuesday([])
         addToWednesday([])
         addToThursday([])
+        addToFriday([])
 
         const mondayClone = [...monday]
         const tuesdayClone = [...tuesday]
@@ -40,6 +41,8 @@ const WeekSummary = () =>{
 
         fillUpList(thursdayClone, thursdayDisplay, addToThursday)
         fillUpList(thursdayClone, thursdayDisplay, addToThursday)
+
+        addToFriday("Demo")
 
 
     }
@@ -65,7 +68,7 @@ const WeekSummary = () =>{
             <h2>Tuesday: {tuesdayDisplay.toString()}</h2>
             <h2>Wednesday: {wednesdayDisplay.toString()}</h2>
             <h2>Thursday: {thursdayDisplay.toString()}</h2>
-            <h2>Friday: {friday.toString()}</h2>
+            <h2>Friday: {fridayDisplay.toString()}</h2>
         </div>
         <div>
         <button onClick={randomize}>Randomize</button>
