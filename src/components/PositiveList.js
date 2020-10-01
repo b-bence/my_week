@@ -26,27 +26,6 @@ const PositiveList = () => {
         newList = setValue(newList, setSecondValue)
         newList = setValue(newList, setThirdValue)
         newList = setValue(newList, setFourthValue)
-
-
-        // let value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        // setFirstValue(value)
-        // let index = newList.indexOf(value);
-        // newList.splice(index, 1); 
-
-        // value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        // setSecondValue(value)
-        // index = newList.indexOf(value);
-        // newList.splice(index, 1);
-
-        // value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        // setThirdValue(value)
-        // index = newList.indexOf(value);
-        // newList.splice(index, 1);
-
-        // value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        // setFourthValue(value)
-        // index = newList.indexOf(value);
-        // newList.splice(index, 1);
     }
     
     function setValue (elementList, valueFunction) {

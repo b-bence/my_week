@@ -20,29 +20,20 @@ const NegativeList = () => {
     const [fourthValue, setFourthValue] = useState('')
 
     const randomize = () =>{
-        const newList = [...values]
+        let newList = [...values]
 
-        let value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        setFirstValue(value)
-        let index = newList.indexOf(value);
-        newList.splice(index, 1); 
+        newList = setValue(newList, setFirstValue)
+        newList = setValue(newList, setSecondValue)
+        newList = setValue(newList, setThirdValue)
+        newList = setValue(newList, setFourthValue)
+    }
 
-        value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        setSecondValue(value)
-        index = newList.indexOf(value);
-        newList.splice(index, 1);
-
-        value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        setThirdValue(value)
-        index = newList.indexOf(value);
-        newList.splice(index, 1);
-
-        value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
-        setFourthValue(value)
-        index = newList.indexOf(value);
-        newList.splice(index, 1);
-
-        
+    function setValue (elementList, valueFunction) {
+        let value = elementList[Math.floor(Math.random() * Math.floor(elementList.length))]
+        valueFunction(value)
+        let index = elementList.indexOf(value);
+        elementList.splice(index, 1); 
+        return elementList;
     }
     
     return (
