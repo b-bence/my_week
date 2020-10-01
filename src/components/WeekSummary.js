@@ -2,20 +2,16 @@ import React, {useState} from 'react'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
 import RandomizeButton from './RandomizeButton'
-
-
-const ContainerDiv = styled.div`
-    width: 100%;
-    margin: 0 auto;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;`
+import ContainerDiv from './ContainerDiv'
 
 const CustomHeader = styled.h2`
     margin: 10px;
-    padding: 7px;
+    padding: 12px;
     `
+
+const CustomBulletPointDiv = styled(BulletPointDiv)`
+    width: 850px;
+`
 
 
 const WeekSummary = () =>{
@@ -74,10 +70,10 @@ const WeekSummary = () =>{
 
     return (
         <ContainerDiv>
-        <BulletPointDiv> 
+        <CustomBulletPointDiv> 
 
         <div style={{height: "15%"}}>
-            <h1>Week Summary</h1>
+            <h1>Week summary</h1>
         </div>
 
         <div style={{height: "70%", width: "100%", textAlign: "left"}}>
@@ -90,7 +86,7 @@ const WeekSummary = () =>{
         <div style={{height: "5%"}}>
         <RandomizeButton onClick={randomize}>Show my week</RandomizeButton>
         </div>
-        </BulletPointDiv>
+        </CustomBulletPointDiv>
         </ContainerDiv>
     )
 

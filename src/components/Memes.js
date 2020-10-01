@@ -2,15 +2,7 @@ import React, {useState} from 'react'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
 import RandomizeButton from './RandomizeButton'
-
-
-const ContainerDiv = styled.div`
-    width: 100%;
-    margin: 0 auto;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;`
+import ContainerDiv from './ContainerDiv'
 
 
 const Memes = () =>{
