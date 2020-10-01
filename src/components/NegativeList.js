@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import {NegativesContext} from './NegativesContext'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
+import RandomizeButton from './RandomizeButton'
 
 
 const CustomHeader = styled.h2`
@@ -54,7 +55,7 @@ const NegativeList = () => {
                 <CustomHeader>{fourthValue}</CustomHeader>
             </div>
             <div style={{height: "5%"}}>
-                <button onClick={randomize}>Give me bad stuff</button>
+                <RandomizeButton onClick={randomize}>Give me bad stuff</RandomizeButton>
             </div>
         </BulletPointDiv>
     )

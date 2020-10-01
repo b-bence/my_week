@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
+import RandomizeButton from './RandomizeButton'
 
 
 const ContainerDiv = styled.div`
@@ -87,7 +88,7 @@ const WeekSummary = () =>{
             <CustomHeader>Friday: {fridayDisplay.toString()}</CustomHeader>
         </div>
         <div style={{height: "5%"}}>
-        <button onClick={randomize}>Show my week</button>
+        <RandomizeButton onClick={randomize}>Show my week</RandomizeButton>
         </div>
         </BulletPointDiv>
         </ContainerDiv>

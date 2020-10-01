@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import {PositivesContext} from './PositivesContext'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
+import RandomizeButton from './RandomizeButton'
 
 
 const CustomHeader = styled.h2`
@@ -52,7 +53,7 @@ const PositiveList = () => {
                 <CustomHeader>{fourthValue}</CustomHeader>
             </div>
             <div style={{height: "5%"}}>
-                <button onClick={randomize}>Give me good stuff</button>
+                <RandomizeButton onClick={randomize}>Give me good stuff</RandomizeButton>
             </div>
             
         </BulletPointDiv>
