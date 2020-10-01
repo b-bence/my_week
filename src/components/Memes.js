@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import BulletPointDiv from './BulletPointDiv'
 import styled from 'styled-components'
+import RandomizeButton from './RandomizeButton'
 
 
 const ContainerDiv = styled.div`
@@ -68,9 +69,9 @@ const Memes = () =>{
                 <img width='300' height='400' src={memeToDisplay} alt=""/>
             </div>
             <div>
-            <button id='css' onClick={randomize}>Give me CSS memes</button>
-            <button id='git' onClick={randomize}>Give me Git memes</button>
-            <button id='programmerMemes' onClick={randomize}>Give me Programmer memes</button>
+            <RandomizeButton id='css' onClick={randomize}>Give me CSS memes</RandomizeButton>
+            <RandomizeButton id='git' onClick={randomize}>Give me Git memes</RandomizeButton>
+            <RandomizeButton id='programmerMemes' onClick={randomize}>Give me Programmer memes</RandomizeButton>
             </div>
         </BulletPointDiv>
         </ContainerDiv>

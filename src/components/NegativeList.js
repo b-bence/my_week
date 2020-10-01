@@ -1,6 +1,15 @@
 import React, {useState, useContext} from 'react'
 import {NegativesContext} from './NegativesContext'
 import BulletPointDiv from './BulletPointDiv'
+import styled from 'styled-components'
+import RandomizeButton from './RandomizeButton'
+
+
+const CustomHeader = styled.h2`
+    margin: 10px;
+    margin-left: 20px;
+    padding: 10px;
+`
 
 const NegativeList = () => {
     const [values] = useContext(NegativesContext)
@@ -8,6 +17,7 @@ const NegativeList = () => {
     const [firstValue, setFirstValue] = useState('')
     const [secondValue, setSecondValue] = useState('')
     const [thirdValue, setThirdValue] = useState('')
+    const [fourthValue, setFourthValue] = useState('')
 
     const randomize = () =>{
         const newList = [...values]
@@ -26,18 +36,26 @@ const NegativeList = () => {
         setThirdValue(value)
         index = newList.indexOf(value);
         newList.splice(index, 1);
+
+        value = newList[Math.floor(Math.random() * Math.floor(newList.length))]
+        setFourthValue(value)
+        index = newList.indexOf(value);
+        newList.splice(index, 1);
+
+        
     }
     
     return (
         <BulletPointDiv>
-            <div style={{height: "20%"}}><h1>Negatives</h1></div>
-            <div style={{height: "60%"}}>
-                <h2>{firstValue}</h2>
-                <h2>{secondValue}</h2>
-                <h2>{thirdValue}</h2>
+            <div style={{height: "15%"}}><h1>Negatives</h1></div>
+            <div style={{height: "60%", width: "100%", textAlign: "left"}}>
+                <CustomHeader>{firstValue}</CustomHeader>
+                <CustomHeader>{secondValue}</CustomHeader>
+                <CustomHeader>{thirdValue}</CustomHeader>
+                <CustomHeader>{fourthValue}</CustomHeader>
             </div>
-            <div>
-                <button onClick={randomize}>Randomize</button>
+            <div style={{height: "5%"}}>
+                <RandomizeButton onClick={randomize}>Give me bad stuff</RandomizeButton>
             </div>
         </BulletPointDiv>
     )

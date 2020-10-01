@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export default styled.div`
     height: 500px;
     width: 550px;
-    background-color: #4f8a8b;
+    background-color: #eeeeee;
     border-radius: 20px;
     display: flex;
     justify-content: center;

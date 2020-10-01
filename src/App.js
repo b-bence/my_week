@@ -28,7 +28,8 @@ const App = () => {
 
 const mainDivStyle={
   alignItems: "center",
-  justifyContent: "center"
+  justifyContent: "center",
+  backgroundColor: "#222831"
 }
 
 export default App;
