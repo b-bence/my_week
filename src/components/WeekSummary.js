@@ -1,5 +1,15 @@
 import React, {useState} from 'react'
 import BulletPointDiv from './BulletPointDiv'
+import styled from 'styled-components'
+
+
+const ContainerDiv = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;`
 
 
 const WeekSummary = () =>{
@@ -10,7 +20,7 @@ const WeekSummary = () =>{
     const tuesday = ["Pair programming", "Planning and understanding"]
     let [tuesdayDisplay, addToTuesday] = useState([])
 
-    const wednesday = ["Pair programming", "Socializing", "Active coding", "Finished many tasks", "Refactor"]
+    const wednesday = ["Pair programming", "Socializing", "Active coding", "Finished many tasks", "Refactor", "Added CSS to project"]
     let [wednesdayDisplay, addToWednesday] = useState([])
 
     const thursday = ["Creating presentation", "Fixing bugs", "Extra features", "Last minute merge conflict", "Pair programming", "Finished most of the project"]
@@ -57,6 +67,7 @@ const WeekSummary = () =>{
     }
 
     return (
+        <ContainerDiv>
         <BulletPointDiv> 
 
         <div>
@@ -74,6 +85,7 @@ const WeekSummary = () =>{
         <button onClick={randomize}>Randomize</button>
         </div>
         </BulletPointDiv>
+        </ContainerDiv>
     )
 
 }

@@ -16,6 +16,7 @@ const Header = () => {
 
             <button><Link to='/positives' >Positives & Negatives</Link></button>
             <button><Link to='/summary' >Week summary</Link></button>
+            <button><Link to='/memes' >Memes</Link></button>
         </HeaderDiv>
     )
 
