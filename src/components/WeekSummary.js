@@ -19,10 +19,10 @@ const WeekSummary = () =>{
     const monday = [" sprint plan", " understanding the code", " slow start", " babzsák session"]
     let [mondayDisplay, addToMonday] = useState([]) 
 
-    const tuesday = [" pair programming", " planning and understanding"]
+    const tuesday = [" pair programming", " planning and understanding", " brainstorming", " finished many tasks"]
     let [tuesdayDisplay, addToTuesday] = useState([])
 
-    const wednesday = [" pair programming", " socializing", " active coding", " finished many tasks", " refactor", " added CSS to project"]
+    const wednesday = [" pair programming", " socializing", " active coding", " refactor", " added CSS to project", " debugging"]
     let [wednesdayDisplay, addToWednesday] = useState([])
 
     const thursday = [" creating presentation", " fixing bugs", " extra features", " last minute merge conflict", " pair programming", " finished most of the project"]
